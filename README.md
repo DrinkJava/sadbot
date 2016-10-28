@@ -34,6 +34,7 @@
 * [Space](#space)
 * [Summary](#summary)
 * [Title](#title)
+* [TLDR](#tldr)
 * [Vote](#vote)
 * [Weather](#weather)
 * [Weed](#weed)
@@ -154,6 +155,11 @@ Sends a random space-related image to thread.
 Sets title of thread.
 
 `/title`
+
+### TLDR
+Get a short description of anything
+
+`/tldr <query>`
 
 ### Vote
 `/vote <index>` To be used in conjunction with `/poll view`

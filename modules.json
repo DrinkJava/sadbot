@@ -201,6 +201,13 @@
     "path": "modules/weed.js",
     "usage": "weed <strain-name>",
     "description": "see information on cannabis strains"
+  },
+    {
+    "name": "tldr",
+    "trigger": "tldr",
+    "path": "modules/tldr.js",
+    "usage": "tldr <anything>",
+    "description": "Get a short description of anything"
   }
 ]
 

@@ -19,12 +19,15 @@
     "moment": "^2.14.1",
     "node-geocoder": "^3.13.0",
     "node-summary": "^1.1.0",
+    "node-wikipedia": "0.0.2",
     "node-wolfram": "0.0.1",
     "nodemon": "^1.9.2",
     "pokedex-promise-v2": "^3.0.1",
     "request": "^2.74.0",
+    "striptags": "^2.1.1",
     "superagent": "^2.1.0",
-    "unfluff": "^1.1.0"
+    "unfluff": "^1.1.0",
+    "wikipedia-js": "0.0.6"
   },
   "devDependencies": {},
   "scripts": {
