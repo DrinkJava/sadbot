@@ -26,7 +26,7 @@ function loginCallback(err, api) {
       var commandString = message.body.slice(prefixLen);
       var trigger = commandString.substring(0, endOfCmd(commandString));
       commands.forEach(function(cmd, index) {
-        if(trigger == commandDescriptions[index]['trigger']) {
+        if(trigger == commandDescriptions[index]['trigger'] && commandDescriptions[index]['activated']) {
           cmd.trigger(commandString.slice(trigger.length+1), api, message);
         }
       });
