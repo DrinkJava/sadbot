@@ -237,6 +237,30 @@
     "usage": "stocks <name>",
     "description": "see information on stock price",
     "activated": true
+  },
+  {
+    "name": "activate",
+    "trigger": "activate",
+    "path": "modules/setactive.js",
+    "usage": "activate <module>",
+    "description": "Turn a module on",
+    "activated": true
+  },
+  {
+    "name": "deactivate",
+    "trigger": "deactivate",
+    "path": "modules/setactive.js",
+    "usage": "deactivate <module>",
+    "description": "Turn a module off",
+    "activated": true
+  },
+  {
+    "name": "active",
+    "trigger": "active",
+    "path": "modules/setactive.js",
+    "usage": "active",
+    "description": "List active/inactive modules",
+    "activated": true
   }
 ]
 
