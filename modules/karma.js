@@ -20,6 +20,11 @@ function trigger(user, api, message) {
   }
   // grab threadID
   var threadID = message.threadID;
+  // if they sent /karma and no username, send the leaderboard
+  if (mode == CHECK && user == '') {
+    doLeaderboard(threadID, api);
+    return;
+  }
   // get users and nicks
   getThreadUsers(threadID, api, function(info) {
     var nicks = info.nicknames;
@@ -130,6 +135,28 @@ function doCheck(userID, threadID, api) {
           body: obj[userID].firstName + ' has ' + karma + ' karma'
         }
         api.sendMessage(msg, threadID);
+      });
+    });
+  });
+}
+
+function doLeaderboard(threadID, api) {
+  firebase(function(db) {
+    // thread
+    var threadRef = db.ref(threadID);
+    // karma settings
+    var karmaRef = threadRef.child('/karma');
+    karmaRef.orderByValue().limitToLast(3).once('value', function(snap) {
+      // iterate over top 3 karma havers
+      snap.forEach(function(data) {
+        // get user name
+        api.getUserInfo(data.key, function(err, obj) {
+          var msg = {
+            body: obj[data.key].firstName + ": " + data.val()
+          };
+          // send message
+          api.sendMessage(msg, threadID);
+        });
       });
     });
   });
