@@ -98,6 +98,8 @@ Connects to Giphy to send gifs corresponding to search term. If no search term i
 
 `/karma <user>` Check a user's karma
 
+`/karma` Display a leaderboard
+
 ### LMGTFY
 `/lmgtfy <phrase>` Generates a snarky LMGTFY link (shortened, of course)
 
